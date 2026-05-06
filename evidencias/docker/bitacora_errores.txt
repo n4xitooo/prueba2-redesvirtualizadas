@@ -1,0 +1,13 @@
+Bitacora de errores detectados durante el proceso
+
+1. Error: Jenkins podia fallar al construir la imagen con BuildKit habilitado.
+   Solucion: se deshabilito BuildKit en build.sh usando DOCKER_BUILDKIT=0.
+
+2. Error: un contenedor previo con nombre samplerunning podia impedir una nueva ejecucion.
+   Solucion: build.sh detiene y elimina el contenedor anterior antes de ejecutar la app.
+
+3. Error: la aplicacion no puede consultar la API si falta THESPORTSDB_API_KEY.
+   Solucion: app.py y build.sh validan la variable de entorno antes de continuar.
+
+4. Error: una respuesta HTTP no exitosa o una conexion fallida podia cortar el flujo sin mensaje claro.
+   Solucion: app.py maneja timeout, conexion, HTTP 404, credenciales invalidas, JSON invalido y errores generales de requests.
