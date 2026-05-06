@@ -1,0 +1,25 @@
+===== docker ps -a =====
+CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS                     PORTS               NAMES
+199366f44739        scouting-football-app   "python app.py"     8 seconds ago       Exited (0) 3 seconds ago                       samplerunning
+
+===== docker logs samplerunning =====
+============================================================
+SISTEMA DE SCOUTING - FOOTBALL MANAGER
+============================================================
+Jugador consultado : Lionel Messi
+------------------------------------------------------------
+Jugador            : Lionel Messi
+Equipo actual      : Inter Miami
+Seleccion          : Argentina
+Dorsal             : 10
+Posicion           : Right Winger
+Nacionalidad       : Argentina
+Edad               : 38 anios
+Estado             : Active
+Altura             : 1.70 m (5 ft 7 in)
+Peso               : 148 lbs
+Pie dominante      : Left
+Costo fichaje      : Free
+Salario            : No disponible
+============================================================
+Consulta finalizada correctamente.
